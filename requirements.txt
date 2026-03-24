@@ -1,0 +1,43 @@
+# ============================================================
+# QueryMind AI — Voice Agent Dependencies
+# ============================================================
+# Install with: pip install -r requirements.txt
+# Requires Python 3.10+
+
+# ----------------------------------------------------------
+# LiveKit Agents Framework + Official Plugins
+# ----------------------------------------------------------
+# livekit-agents is the core framework for building voice agents.
+# The extras install the official plugins for each provider
+# so you don't have to wire up low-level SDKs yourself.
+livekit-agents>=0.12.0
+livekit-plugins-deepgram>=0.6.0    # Deepgram streaming STT
+livekit-plugins-groq>=0.3.0        # Groq LLM (Llama 3.3 70B)
+livekit-plugins-elevenlabs>=0.3.0  # ElevenLabs streaming TTS
+livekit-plugins-silero>=0.7.0      # Silero VAD
+
+# ----------------------------------------------------------
+# Twilio — Webhook Signature Validation
+# ----------------------------------------------------------
+# Used to verify that inbound webhook requests genuinely
+# come from Twilio, not a malicious third party.
+twilio>=9.0.0
+
+# ----------------------------------------------------------
+# Async HTTP — Airtable REST API Calls
+# ----------------------------------------------------------
+# We use aiohttp so Airtable logging never blocks the async
+# event loop. A blocked event loop would delay speech.
+aiohttp>=3.9.0
+
+# ----------------------------------------------------------
+# Environment Variable Management
+# ----------------------------------------------------------
+# Loads credentials from the .env file so secrets never
+# appear in source code.
+python-dotenv>=1.0.0
+
+# ----------------------------------------------------------
+# Synchronous HTTP (optional utility use)
+# ----------------------------------------------------------
+requests>=2.31.0

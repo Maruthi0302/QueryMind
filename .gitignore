@@ -1,0 +1,29 @@
+# ============================================================
+# QueryMind AI — Git Ignore Rules
+# ============================================================
+
+# Secret credentials — NEVER commit this
+.env
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
